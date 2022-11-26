@@ -16,10 +16,16 @@ public class NodeFactory {
     public static Node createNode(String line, int level) {
         String name = line.replace(".", "");
 
-        switch (name) {
-            case "let":
-                return  new LetNode(name, level);
-        }
-        return new OtherNode(name, level);
+        return switch (name) {
+            case "let" -> new LetNode(level);
+            case "where" -> new WhereNode(level);
+            case "within" -> new WithinNode(level);
+            case "rec" -> new RecNode(level);
+            case "@" -> new InfixNode(level);
+            case "and" -> new AndNode(level);
+            case "function_form" -> new FunctionFormNode(level);
+            case "lambda" -> new LambdaNode(level);
+            default -> new OtherNode(name, level);
+        };
     }
 }

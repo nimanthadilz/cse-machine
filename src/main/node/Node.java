@@ -3,7 +3,7 @@ package node;
 import java.util.ArrayList;
 
 public abstract class Node {
-    private final int level;
+    private int level;
     private final String name;
     private final ArrayList<Node> children;
     private Node parent;
@@ -40,6 +40,10 @@ public abstract class Node {
 
     public void setParent(Node parent) {
         this.parent = parent;
+        this.level = parent.getLevel() + 1;
+        for (Node child : this.children) {
+            child.setParent(this);
+        }
     }
 
     public void traverse() {
@@ -55,4 +59,5 @@ public abstract class Node {
         }
     }
 
+    public abstract Node getStandardizedNode();
 }

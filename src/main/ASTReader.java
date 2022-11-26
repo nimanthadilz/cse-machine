@@ -20,7 +20,7 @@ public class ASTReader {
             Scanner fileReader = new Scanner(fileObj);
 
             while (fileReader.hasNextLine()) {
-                String line = fileReader.nextLine();
+                String line = fileReader.nextLine().strip();
                 int nextLevel = this.getLevel(line);
 
                 Node newNode = NodeFactory.createNode(line, nextLevel);
@@ -70,7 +70,8 @@ public class ASTReader {
     }
 
     public static void main(String[] args) {
-        ASTReader reader = new ASTReader("/home/nimantha/rpal_asts/fibs_in_a_given_range");
-        reader.astRoot.traverse();
+        ASTReader reader = new ASTReader("/home/nimantha/rpal_asts/nested_let");
+//        reader.astRoot.traverse();
+        reader.astRoot.getStandardizedNode().traverse();
     }
 }
