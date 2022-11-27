@@ -1,6 +1,7 @@
+package ast;
+
 import node.Node;
 import node.NodeFactory;
-import node.OtherNode;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -66,7 +67,7 @@ public class ASTReader {
     }
 
     public Node getStandardizedTree() {
-        return new OtherNode("other", 3);
+        return this.astRoot.getStandardizedNode();
     }
 
     public static void main(String[] args) {

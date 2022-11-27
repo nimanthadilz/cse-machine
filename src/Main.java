@@ -1,3 +1,5 @@
+import ast.ASTReader;
+import csemachine.ControlStructureSet;
 import node.Node;
 
 public class Main {
@@ -7,5 +9,8 @@ public class Main {
 
         ASTReader astReader = new ASTReader(filename);
         Node standardizedTreeRoot = astReader.getStandardizedTree();
+
+        ControlStructureSet controlStructureSet = new ControlStructureSet(standardizedTreeRoot);
+        controlStructureSet.printControlStructureSet();
     }
 }
