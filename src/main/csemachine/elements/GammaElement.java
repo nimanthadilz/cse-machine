@@ -77,8 +77,8 @@ public class GammaElement extends Element {
                 }
                 // CSE Rule 10
             } else if (rator instanceof TupleElement tupleElement) {
-                IntElement index = (IntElement) stack.pop();
-                stack.push(tupleElement.getValueAt(index.getIntValue()));
+                IntElement index = (IntElement) rand;
+                stack.push(tupleElement.getValueAt(index.getIntValue() - 1));
             } else if (rator instanceof YElement) {
                 LambdaElement lambdaElement = (LambdaElement) rand;
                 EtaElement etaElement = new EtaElement(
