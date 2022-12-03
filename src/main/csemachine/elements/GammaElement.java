@@ -67,6 +67,8 @@ public class GammaElement extends Element {
                     case "Conc" -> {
                         Element next = stack.pop();
                         stack.push(new StrElement(rand.getStringRepresentation() + next.getStringRepresentation()));
+                        // remove additional gamma from control
+                        control.pop();
                     }
                     case "Isinteger" -> stack.push(new BooleanElement(rand instanceof IntElement));
                     case "Isstring" -> stack.push(new BooleanElement(rand instanceof StrElement));
