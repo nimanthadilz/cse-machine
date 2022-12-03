@@ -45,12 +45,14 @@ public class ControlStructureSet {
                 // add two delta elements to the control structure
                 ControlStructure thenDeltaStructure = new ControlStructure(++this.currentControlStructureIndex);
                 this.controlStructureList.add(thenDeltaStructure);
-                this.addToControlStructure(thenDeltaStructure, node.getChildAtIndex(1));
                 controlStructure.addElement(new DeltaElement(this.currentControlStructureIndex));
+
                 ControlStructure elseDeltaStructure = new ControlStructure(++this.currentControlStructureIndex);
                 this.controlStructureList.add(elseDeltaStructure);
-                this.addToControlStructure(elseDeltaStructure, node.getChildAtIndex(2));
                 controlStructure.addElement(new DeltaElement(this.currentControlStructureIndex));
+
+                this.addToControlStructure(thenDeltaStructure, node.getChildAtIndex(1));
+                this.addToControlStructure(elseDeltaStructure, node.getChildAtIndex(2));
 
                 // add a beta element to the structure
                 controlStructure.addElement(new BetaElement());
@@ -72,6 +74,10 @@ public class ControlStructureSet {
                 }
             }
         }
+    }
+
+    public ControlStructure getControlStructureAt(int index) {
+        return this.controlStructureList.get(index);
     }
 
     public void printControlStructureSet() {

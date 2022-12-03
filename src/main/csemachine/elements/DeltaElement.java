@@ -11,4 +11,8 @@ public class DeltaElement extends Element {
     public String getStringRepresentation() {
         return "delta" + index;
     }
+
+    public int getIndex() {
+        return index;
+    }
 }

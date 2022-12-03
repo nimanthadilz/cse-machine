@@ -11,4 +11,8 @@ public class BooleanElement extends Element {
     public String getStringRepresentation() {
         return String.valueOf(this.booleanValue);
     }
+
+    public boolean getBooleanValue() {
+        return this.booleanValue;
+    }
 }

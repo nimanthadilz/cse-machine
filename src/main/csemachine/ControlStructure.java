@@ -17,6 +17,10 @@ public class ControlStructure {
         this.elementList.add(element);
     }
 
+    public ArrayList<Element> getElementList() {
+        return this.elementList;
+    }
+
     public void print() {
         System.out.printf("$%d=", this.index);
         for (Element e : elementList) {

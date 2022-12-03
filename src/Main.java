@@ -1,4 +1,5 @@
 import ast.ASTReader;
+import csemachine.CSEMachine;
 import csemachine.ControlStructureSet;
 import node.Node;
 
@@ -11,6 +12,10 @@ public class Main {
         Node standardizedTreeRoot = astReader.getStandardizedTree();
 
         ControlStructureSet controlStructureSet = new ControlStructureSet(standardizedTreeRoot);
+        System.out.println("Control Structures:");
         controlStructureSet.printControlStructureSet();
+        System.out.println("===============================");
+        CSEMachine cseMachine = new CSEMachine(standardizedTreeRoot);
+        cseMachine.evaluate();
     }
 }

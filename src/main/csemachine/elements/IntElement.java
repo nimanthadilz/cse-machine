@@ -11,4 +11,8 @@ public class IntElement extends Element {
     public String getStringRepresentation() {
         return String.valueOf(this.integer);
     }
+
+    public int getIntValue() {
+        return this.integer;
+    }
 }
