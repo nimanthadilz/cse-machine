@@ -14,7 +14,7 @@ public class ControlStructureElementFactory {
             return new IntElement(nodeName.substring(5, nodeName.length() - 1));
         }
         if (nodeName.startsWith("<STR:")) {
-            return new StrElement(nodeName.substring(5, nodeName.length() - 1));
+            return new StrElement(nodeName.substring(6, nodeName.length() - 2));
         }
         if (isBinaryOperator(nodeName)) {
             return new BinaryOperatorElement(nodeName);
