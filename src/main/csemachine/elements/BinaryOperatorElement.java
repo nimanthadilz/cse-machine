@@ -2,6 +2,7 @@ package csemachine.elements;
 
 import csemachine.CSEMachine;
 
+import java.util.ArrayList;
 import java.util.Stack;
 
 public class BinaryOperatorElement extends Element {
@@ -140,7 +141,25 @@ public class BinaryOperatorElement extends Element {
                 );
                 stack.push(result);
             }
-            // TODO: aug operation
+            case "aug" -> {
+                ArrayList<Element> tupleElements = new ArrayList<>();
+                if (!(rand1 instanceof NilElement)) {
+                    if (rand1 instanceof TupleElement randTuple) {
+                        tupleElements.addAll(randTuple.getElements());
+                    } else {
+                        tupleElements.add(rand1);
+                    }
+                }
+                if (!(rand2 instanceof NilElement)) {
+                    if (rand2 instanceof TupleElement randTuple) {
+                        tupleElements.addAll(randTuple.getElements());
+                    } else {
+                        tupleElements.add(rand2);
+                    }
+                }
+                result = new TupleElement(tupleElements.size(), tupleElements);
+                stack.push(result);
+            }
         }
     }
 }
