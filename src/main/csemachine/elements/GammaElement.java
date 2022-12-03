@@ -32,7 +32,7 @@ public class GammaElement extends Element {
 
             // bind vars to rands
             ArrayList<String> bindingVars = lambdaElement.getBindingVars();
-            if (stack.peek() instanceof TupleElement) {
+            if (stack.peek() instanceof TupleElement && bindingVars.size() > 1) {
                 TupleElement tupleElement = (TupleElement) stack.pop();
                 ArrayList<Element> tupleElements = tupleElement.getElements();
                 for (int i = 0; i < tupleElements.size(); i++) {
