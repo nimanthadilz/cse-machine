@@ -18,10 +18,6 @@ public class Environment {
         this.parent = parent;
     }
 
-    public Environment getParent() {
-        return parent;
-    }
-
     public Element search(String id) {
         if (this.table.containsKey(id)) {
             return this.table.get(id);
@@ -32,6 +28,10 @@ public class Environment {
 
     public void addDefinition(String id, Element element) {
         this.table.put(id, element);
+    }
+
+    public int getIndex() {
+        return index;
     }
 }
 

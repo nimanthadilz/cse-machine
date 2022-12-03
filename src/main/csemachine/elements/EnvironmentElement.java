@@ -1,14 +1,17 @@
 package csemachine.elements;
 
 import csemachine.CSEMachine;
+import csemachine.Environment;
 
 import java.util.Stack;
 
 public class EnvironmentElement extends Element {
     private final int index;
+    private final Environment environment;
 
-    public EnvironmentElement(int index) {
+    public EnvironmentElement(int index, Environment environment) {
         this.index = index;
+        this.environment = environment;
     }
 
     @Override
@@ -28,10 +31,21 @@ public class EnvironmentElement extends Element {
             stack.pop(); // remove other environment marker from stack
             stack.push(value);
         }
-        cseMachine.setEnvironment(cseMachine.getEnvironment().getParent());
+
+        // find the new environment
+        for (int i = stack.size() - 1; i > -1; i--) {
+            if (stack.get(i) instanceof EnvironmentElement environmentElement) {
+                cseMachine.setEnvironment(environmentElement.getEnvironment());
+                break;
+            }
+        }
     }
 
     public int getIndex() {
         return index;
+    }
+
+    public Environment getEnvironment() {
+        return environment;
     }
 }

@@ -28,7 +28,7 @@ public class CSEMachine {
     public void evaluate() {
         // add initial environment marker to the control and stack
         this.environment = new Environment(0);
-        Element envZero = new EnvironmentElement(0);
+        Element envZero = new EnvironmentElement(0, this.environment);
         this.control.push(envZero);
         this.stack.push(envZero);
 

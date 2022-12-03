@@ -45,7 +45,7 @@ public class GammaElement extends Element {
             }
 
             // put environment markers in the control and stack
-            Element envMarker = new EnvironmentElement(newEnvironmentIndex);
+            Element envMarker = new EnvironmentElement(newEnvironmentIndex, newEnvironment);
             control.push(envMarker);
             stack.push(envMarker);
 
@@ -77,6 +77,26 @@ public class GammaElement extends Element {
             } else if (rator instanceof TupleElement tupleElement) {
                 IntElement index = (IntElement) stack.pop();
                 stack.push(tupleElement.getValueAt(index.getIntValue()));
+            } else if (rator instanceof YElement) {
+                LambdaElement lambdaElement = (LambdaElement) rand;
+                EtaElement etaElement = new EtaElement(
+                        lambdaElement.getIndex(),
+                        lambdaElement.getBindingVars(),
+                        lambdaElement.getEnvironment()
+                );
+                stack.push(etaElement);
+            } else if (rator instanceof EtaElement etaElement) {
+                control.push(new GammaElement());
+                control.push(new GammaElement());
+                stack.push(rand);
+                stack.push(rator);
+
+                LambdaElement newLambda = new LambdaElement(
+                        etaElement.getIndex(),
+                        etaElement.getBindingVars()
+                        );
+                newLambda.setEnvironment(etaElement.getEnvironment());
+                stack.push(newLambda);
             }
         }
     }

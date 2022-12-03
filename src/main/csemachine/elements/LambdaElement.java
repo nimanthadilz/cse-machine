@@ -22,6 +22,8 @@ public class LambdaElement extends Element {
         for (String var : bindingVars) {
             repr.append("/").append(var);
         }
+        if (this.environment != null)
+            repr.append("//").append(this.environment.getIndex());
         return repr.toString();
     }
 
@@ -41,5 +43,9 @@ public class LambdaElement extends Element {
 
     public ArrayList<String> getBindingVars() {
         return bindingVars;
+    }
+
+    public void setEnvironment(Environment environment) {
+        this.environment = environment;
     }
 }
