@@ -47,5 +47,5 @@ default: classes
 classes: $(CLASSES:.java=.class)
 
 clean:
-	$(RM) *.class
+	$(RM) $(CLASSES:.java=.class)
 
