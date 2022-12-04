@@ -34,6 +34,9 @@ public class ControlStructureElementFactory {
         if (nodeName.equals("<nil>")) {
             return new NilElement();
         }
+        if (nodeName.equals("<dummy>")) {
+            return new DummyElement();
+        }
 
         throw new IllegalArgumentException("Incompatible type '" + nodeName + "'");
     }

@@ -29,7 +29,7 @@ public class IDElement extends Element {
     }
 
     private boolean isReserved(String id) {
-        String[] reservedIDs = { "Print", "Isstring", "Isinteger", "Istruthvalue", "Istuple", "Isfunction", "Isdummy",
+        String[] reservedIDs = { "Print", "Isstring", "Isinteger", "Istruthvalue", "Istuple", "Isdummy",
             "Stem", "Stern", "Conc", "Order", "Null" };
         for (String keyword: reservedIDs) {
             if (keyword.equals(id))

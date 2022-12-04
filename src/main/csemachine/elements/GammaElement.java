@@ -79,6 +79,7 @@ public class GammaElement extends Element {
                     case "Isstring" -> stack.push(new BooleanElement(rand instanceof StrElement));
                     case "Istruthvalue" -> stack.push(new BooleanElement(rand instanceof BooleanElement));
                     case "Istuple" -> stack.push(new BooleanElement(rand instanceof TupleElement));
+                    case "Isdummy" -> stack.push(new BooleanElement(rand instanceof DummyElement));
                 }
                 // CSE Rule 10
             } else if (rator instanceof TupleElement tupleElement) {
