@@ -4,10 +4,10 @@ import main.csemachine.CSEMachine;
 
 import java.util.Stack;
 
-public class UnaryOperator extends Element {
+public class UnaryOperatorElement extends Element {
     private final String operator;
 
-    public UnaryOperator(String operator) {
+    public UnaryOperatorElement(String operator) {
         this.operator = operator;
     }
 

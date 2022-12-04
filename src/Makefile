@@ -39,7 +39,7 @@ CLASSES = \
 	main/csemachine/elements/StrElement.java \
 	main/csemachine/elements/TauElement.java \
 	main/csemachine/elements/TupleElement.java \
-	main/csemachine/elements/UnaryOperator.java \
+	main/csemachine/elements/UnaryOperatorElement.java \
 	main/csemachine/elements/YElement.java \
 
 default: classes

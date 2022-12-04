@@ -20,7 +20,7 @@ public class ControlStructureElementFactory {
             return new BinaryOperatorElement(nodeName);
         }
         if (isUnaryOperator(nodeName)) {
-            return new UnaryOperator(nodeName);
+            return new UnaryOperatorElement(nodeName);
         }
         if (nodeName.equals("Y")) {
             return new YElement();
