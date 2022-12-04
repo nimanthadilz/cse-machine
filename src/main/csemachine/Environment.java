@@ -1,6 +1,6 @@
-package csemachine;
+package main.csemachine;
 
-import csemachine.elements.Element;
+import main.csemachine.elements.Element;
 
 import java.util.HashMap;
 

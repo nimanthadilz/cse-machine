@@ -1,4 +1,4 @@
-package node;
+package main.node;
 
 public class LetNode extends Node {
     public LetNode(int level) {

@@ -1,8 +1,8 @@
-package csemachine;
+package main.csemachine;
 
-import csemachine.elements.Element;
-import csemachine.elements.EnvironmentElement;
-import node.Node;
+import main.csemachine.elements.Element;
+import main.csemachine.elements.EnvironmentElement;
+import main.node.Node;
 
 import java.util.Stack;
 import java.util.StringJoiner;

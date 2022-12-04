@@ -1,7 +1,7 @@
-package csemachine.elements;
+package main.csemachine.elements;
 
-import csemachine.CSEMachine;
-import csemachine.Environment;
+import main.csemachine.CSEMachine;
+import main.csemachine.Environment;
 
 import java.util.ArrayList;
 

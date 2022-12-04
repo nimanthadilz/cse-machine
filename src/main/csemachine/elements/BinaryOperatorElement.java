@@ -1,6 +1,6 @@
-package csemachine.elements;
+package main.csemachine.elements;
 
-import csemachine.CSEMachine;
+import main.csemachine.CSEMachine;
 
 import java.util.ArrayList;
 import java.util.Stack;

@@ -1,4 +1,4 @@
-package node;
+package main.node;
 
 public class WhereNode extends Node {
     public WhereNode(int level) {

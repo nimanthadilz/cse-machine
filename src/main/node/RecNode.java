@@ -1,4 +1,4 @@
-package node;
+package main.node;
 
 public class RecNode extends Node {
     public RecNode(int level) {

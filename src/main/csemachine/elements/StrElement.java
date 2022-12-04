@@ -1,4 +1,4 @@
-package csemachine.elements;
+package main.csemachine.elements;
 
 public class StrElement extends Element {
     private final String string;

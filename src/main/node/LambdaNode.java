@@ -1,4 +1,4 @@
-package node;
+package main.node;
 
 public class LambdaNode extends Node {
     public LambdaNode(int level) {

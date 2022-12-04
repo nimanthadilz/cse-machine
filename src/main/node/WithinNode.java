@@ -1,4 +1,4 @@
-package node;
+package main.node;
 
 public class WithinNode extends Node {
     public WithinNode(int level) {

@@ -1,4 +1,4 @@
-package csemachine.elements;
+package main.csemachine.elements;
 
 public class IntElement extends Element {
     private final int integer;

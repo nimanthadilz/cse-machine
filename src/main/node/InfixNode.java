@@ -1,4 +1,4 @@
-package node;
+package main.node;
 
 public class InfixNode extends Node {
     public InfixNode(int level) {

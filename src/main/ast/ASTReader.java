@@ -1,7 +1,7 @@
-package ast;
+package main.ast;
 
-import node.Node;
-import node.NodeFactory;
+import main.node.Node;
+import main.node.NodeFactory;
 
 import java.io.File;
 import java.io.FileNotFoundException;

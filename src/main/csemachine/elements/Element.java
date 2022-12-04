@@ -1,6 +1,6 @@
-package csemachine.elements;
+package main.csemachine.elements;
 
-import csemachine.CSEMachine;
+import main.csemachine.CSEMachine;
 
 public abstract class Element {
     public abstract String getStringRepresentation();

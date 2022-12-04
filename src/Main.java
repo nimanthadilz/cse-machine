@@ -1,7 +1,7 @@
-import ast.ASTReader;
-import csemachine.CSEMachine;
-import csemachine.ControlStructureSet;
-import node.Node;
+import main.ast.ASTReader;
+import main.csemachine.CSEMachine;
+import main.csemachine.ControlStructureSet;
+import main.node.Node;
 
 public class Main {
     public static void main(String[] args) {
