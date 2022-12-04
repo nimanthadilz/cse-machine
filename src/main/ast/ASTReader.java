@@ -36,7 +36,7 @@ public class ASTReader {
             }
 
         } catch (FileNotFoundException e) {
-            System.out.printf("File %s is not found.", filename);
+            System.out.printf("File %s is not found.\n", filename);
         }
     }
 
@@ -68,11 +68,5 @@ public class ASTReader {
 
     public Node getStandardizedTree() {
         return this.astRoot.getStandardizedNode();
-    }
-
-    public static void main(String[] args) {
-        ASTReader reader = new ASTReader("/home/nimantha/rpal_asts/nested_let");
-//        reader.astRoot.traverse();
-        reader.astRoot.getStandardizedNode().traverse();
     }
 }

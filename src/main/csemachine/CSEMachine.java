@@ -9,20 +9,22 @@ import java.util.StringJoiner;
 
 
 public class CSEMachine {
-    private ControlStructureSet controlStructureSet;
-    private Stack<Element> control;
-    private Stack<Element> stack;
+    private final ControlStructureSet controlStructureSet;
+    private final Stack<Element> control;
+    private final Stack<Element> stack;
     private Environment environment;
     private int lastEnvIndex = 0;
 
     public CSEMachine(Node root) {
-        try {
             controlStructureSet = new ControlStructureSet(root);
+            /*
+            For debugging purposes
+            System.out.println("Control Structures:");
+            controlStructureSet.printControlStructureSet();
+            System.out.println("===============================");
+            */
             this.control = new Stack<>();
             this.stack = new Stack<>();
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
     }
 
     public void evaluate() {
@@ -39,14 +41,14 @@ public class CSEMachine {
         }
 
         while (!this.control.isEmpty()) {
-            // call a method to display the control and stack
+            /*
+            For debugging purposes
             this.displayControl();
             this.displayStack();
+            */
             Element poppedElementFromControl = this.control.pop();
             poppedElementFromControl.process(this);
         }
-        this.displayStack();
-
     }
 
     public Stack<Element> getStack() {

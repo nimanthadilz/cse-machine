@@ -23,7 +23,7 @@ public class Environment {
             return this.table.get(id);
         } else if (this.parent != null)
             return this.parent.search(id);
-        throw new IllegalArgumentException("id " + id + " not found in the env tree.");
+        throw new IllegalArgumentException("Id " + id + " not found in the env tree.");
     }
 
     public void addDefinition(String id, Element element) {
