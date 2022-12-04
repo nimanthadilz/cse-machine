@@ -5,7 +5,7 @@ JC = javac
 	$(JC) $(JFLAGS) $*.java
 
 CLASSES = \
-	Main.java \
+	myrpal.java \
 	main/ast/ASTReader.java \
 	main/node/Node.java \
 	main/node/NodeFactory.java \
