@@ -1,0 +1,4 @@
+let
+    f x y z = x ge y -> (x ge z -> x | z) | (y ge z -> y | z)
+in
+    Print(f 100 (-2) 3)

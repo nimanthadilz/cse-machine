@@ -1,0 +1,15 @@
+gamma 
+.<ID:Print> 
+.gamma 
+..lambda 
+..., 
+....<ID:x> 
+....<ID:y> 
+....<ID:z> 
+...+ 
+....<INT:3> 
+....<INT:2> 
+..tau 
+...<INT:1> 
+...<INT:2> 
+...<INT:3> 

@@ -1,0 +1,31 @@
+let
+    rec gotoN s n =
+        (n ge 1) & (s eq '') ->
+        false
+        | n eq 1 ->
+            s
+            | gotoN (Stern s) (n-1)
+in
+let
+    rec getM s m = 
+        (s eq '') & (m gr 0) ->
+        false
+        | m eq 0 -> 
+            ''
+            | (fn Y. Isstring(Y) -> Conc (Stem s) Y | Y) (getM (Stern s) (m-1))
+in
+let
+    produceOutput strFromN m =
+        Isstring(strFromN) ->
+        (fn X. Isstring(X) -> X | 'Out of range: m') (getM strFromN m)
+        | 'Out of range: n'
+in
+let
+    substring s n m =
+        Isstring(s) ->
+        Isinteger(n) & Isinteger(m) & (n gr 0) & (m gr 0) ->
+            produceOutput (gotoN s n) m
+            | 'n or m is not an positive integer.'
+        | 'Not a String.'
+in
+    Print(substring 'hello world' 1 3)

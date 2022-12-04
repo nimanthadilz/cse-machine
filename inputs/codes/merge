@@ -1,0 +1,33 @@
+let
+    alphabet = ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j' , 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+in
+let
+    rec findChar c n =
+        n gr 26 ->
+        false
+        | (alphabet n) eq c
+            -> n
+            | findChar c (n+1)
+in
+let
+    rec getCharValue c = findChar c 1
+in
+let
+    compareFirstChars s1 s2 =
+        getCharValue (Stem s1) le getCharValue (Stem s2)
+in
+let
+    rec merge s1 s2 =
+    Isstring(s1) & Isstring(s2) ->
+    (s1 eq '' & s2 eq '') ->
+    ''
+    | (s1 ne '' & s2 eq '')
+        -> s1    
+        | (s1 eq '' & s2 ne '')
+            -> s2
+            | (compareFirstChars s1 s2)
+                -> Conc (Stem s1) (merge (Stern s1) s2)
+                | Conc (Stem s2) (merge s1 (Stern s2))
+    | 's1 and s2 must be Strings.'
+in
+    Print(merge 'acegh' 'bdfi')

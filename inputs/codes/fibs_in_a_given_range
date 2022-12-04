@@ -1,0 +1,7 @@
+let
+    rec fib x = x eq 1 -> 1 | x eq 2 -> 1 | fib (x-1) + fib(x-2)
+in
+    let
+        rec range y = y eq 1 ->  (nil aug 1) | (range(y-1) aug fib(y))
+    in
+        Print(range(10))

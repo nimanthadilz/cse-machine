@@ -1,0 +1,4 @@
+let
+    rec sum_of_first_n n = n eq 1 -> 1 | n + sum_of_first_n (n-1)
+in
+    Print(sum_of_first_n 1000)

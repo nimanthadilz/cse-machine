@@ -1,0 +1,4 @@
+let 
+f x = x ge 0 -> 'positive' | 'negative'
+in
+Print(f (-1))

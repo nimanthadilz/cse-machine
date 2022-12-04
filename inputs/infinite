@@ -1,0 +1,15 @@
+let 
+.rec 
+..function_form 
+...<ID:f> 
+...<ID:x> 
+...gamma 
+....<ID:f> 
+....+ 
+.....<ID:x> 
+.....<INT:1> 
+.gamma 
+..<ID:Print> 
+..gamma 
+...<ID:f> 
+...<INT:1> 

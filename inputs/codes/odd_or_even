@@ -1,0 +1,7 @@
+let
+    remainder n d = (n - d * (n / d))
+in
+    let 
+        even_or_odd k = ((remainder k 2) eq 0) -> 'even' | 'odd'
+    in
+        Print(even_or_odd 21)

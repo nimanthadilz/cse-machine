@@ -1,0 +1,16 @@
+let
+.function_form
+..<ID:f>
+..<ID:x>
+..-> 
+...ge 
+....<ID:x> 
+....<INT:0> 
+...<STR:'positive'> 
+...<STR:'negative'> 
+.gamma 
+..<ID:Print> 
+..gamma 
+...<ID:f> 
+...neg 
+....<INT:1> 

@@ -1,0 +1,10 @@
+let
+    remainder n d = (n - d * (n / d))
+in
+    let
+        rec reverse rev x = x eq 0 -> rev | reverse (rev * 10 + (remainder x 10)) (x/10)
+    in
+        let
+            is_pal k = k eq reverse 0 k
+        in
+            Print(is_pal 7487847)
