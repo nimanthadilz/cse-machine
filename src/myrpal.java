@@ -3,7 +3,7 @@ import main.csemachine.CSEMachine;
 import main.csemachine.ControlStructureSet;
 import main.node.Node;
 
-public class Main {
+public class myrpal {
     public static void main(String[] args) {
         String filename = args[0];
         System.out.println(filename);
