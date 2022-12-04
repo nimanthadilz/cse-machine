@@ -70,6 +70,11 @@ public class GammaElement extends Element {
                         // remove additional gamma from control
                         control.pop();
                     }
+                    case "Order" -> {
+                        int length = ((TupleElement) rand).getElements().size();
+                        stack.push(new IntElement(String.valueOf(length)));
+                    }
+                    case "Null" -> stack.push(new BooleanElement(rand instanceof NilElement));
                     case "Isinteger" -> stack.push(new BooleanElement(rand instanceof IntElement));
                     case "Isstring" -> stack.push(new BooleanElement(rand instanceof StrElement));
                     case "Istruthvalue" -> stack.push(new BooleanElement(rand instanceof BooleanElement));
@@ -96,7 +101,7 @@ public class GammaElement extends Element {
                 LambdaElement newLambda = new LambdaElement(
                         etaElement.getIndex(),
                         etaElement.getBindingVars()
-                        );
+                );
                 newLambda.setEnvironment(etaElement.getEnvironment());
                 stack.push(newLambda);
             }
